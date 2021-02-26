@@ -3,7 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import {routes} from '../../shared/config/routes';
 
-import LoginScreen from '../screens/login';
+import {LoginScreen} from '../screens';
 
 const Stack = createStackNavigator();
 
