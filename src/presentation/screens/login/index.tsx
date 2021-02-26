@@ -2,8 +2,8 @@ import React from 'react';
 
 import View from './view';
 
-function HomeScreen() {
+function LoginScreen() {
   return <View />;
 }
 
-export default HomeScreen;
+export default LoginScreen;
