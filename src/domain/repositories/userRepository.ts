@@ -1,5 +1,5 @@
 import {User} from '../entities/user';
 
 export interface UserRepository {
-  getUsers(): Promise<Array<User>>;
+  login(email: string, password: string): Promise<User>;
 }

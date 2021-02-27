@@ -14,11 +14,15 @@ type ContentProps = {
 
 function Content({children, testID, scrollable}: ContentProps) {
   return (
-    <KeyboardScrollView enableOnAndroid={false} extraScrollHeight={50}>
+    <KeyboardScrollView enableOnAndroid={false} extraScrollHeight={100}>
       <SafeAreaViewStyled>
-        <Wrapper testID={testID}>
-          {scrollable ? <ScrollView>{children}</ScrollView> : children}
-        </Wrapper>
+        {scrollable ? (
+          <ScrollView>
+            <Wrapper testID={testID}>{children}</Wrapper>
+          </ScrollView>
+        ) : (
+          <Wrapper testID={testID}>children</Wrapper>
+        )}
       </SafeAreaViewStyled>
     </KeyboardScrollView>
   );

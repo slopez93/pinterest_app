@@ -7,14 +7,18 @@ const reducer = (
   state: IState = INITIAL_STATE,
   action: IActionCreator,
 ): IState => {
-  const {type, payload} = action;
+  const {type} = action;
 
   switch (type) {
-    case types.LOGGED_IN:
+    case types.SET_IS_LOADING:
       return {
         ...state,
-        user: payload.user,
-        isLoggedIn: true,
+        isLoading: true,
+      };
+    case types.SET_IS_NOT_LOADING:
+      return {
+        ...state,
+        isLoading: false,
       };
     default:
       return state;

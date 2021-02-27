@@ -1,18 +1,14 @@
 export class UserModel {
-  public id: string;
   public name: string;
-  public username: string;
-  public email: string;
+  public token: string;
 
-  constructor(id: string, name: string, username: string, email: string) {
-    this.id = id;
+  constructor(name: string, token: string) {
     this.name = name;
-    this.username = username;
-    this.email = email;
+    this.token = token;
   }
 
   static fromJSON(data: any): UserModel {
-    return new UserModel(data.id, data.name, data.username, data.email);
+    return new UserModel(data.name, data.token);
   }
 
   static fromArrayJSON(data: any): Array<UserModel> {
@@ -21,10 +17,8 @@ export class UserModel {
 
   toJSON(): object {
     return {
-      id: this.id,
       name: this.name,
-      username: this.username,
-      email: this.email,
+      token: this.token,
     };
   }
 }

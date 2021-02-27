@@ -4,5 +4,5 @@ export type IState = {
 
 export interface IActionCreator {
   type: string;
-  payload: object;
+  payload: any;
 }

@@ -1,21 +1,21 @@
 export class User {
-  private _id: string;
-  private _email: string;
+  private _name: string;
+  private _token: string;
 
-  constructor(id: string, email: string) {
-    this._id = id;
-    this._email = email;
+  constructor(name: string, token: string) {
+    this._name = name;
+    this._token = token;
   }
 
-  static create(id: string, email: string): User {
-    return new User(id, email);
+  static create(name: string, token: string): User {
+    return new User(name, token);
   }
 
-  public get id() {
-    return this._id;
+  public get name() {
+    return this._name;
   }
 
-  public get email() {
-    return this._email;
+  public get token() {
+    return this._token;
   }
 }

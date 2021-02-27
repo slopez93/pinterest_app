@@ -1,5 +1,5 @@
 import {Container} from 'inversify';
-import {GetUsersUseCase} from '../../application/usecases/user/GetUsersUseCase';
+import {UserLoginUseCase} from '../../application/usecases/user/UserLoginUseCase';
 import {UserRepository} from '../../domain/repositories/userRepository';
 import {
   UserRemoteDataSource,
@@ -11,7 +11,7 @@ import {HttpManager, HttpManagerImpl} from '../networking';
 const serviceLocator = new Container();
 
 // UseCases
-serviceLocator.bind<GetUsersUseCase>('GetUsersUseCase').to(GetUsersUseCase);
+serviceLocator.bind<UserLoginUseCase>('UserLoginUseCase').to(UserLoginUseCase);
 
 /// Repositories
 serviceLocator.bind<UserRepository>('UserRepository').to(UserRepositoryImpl);

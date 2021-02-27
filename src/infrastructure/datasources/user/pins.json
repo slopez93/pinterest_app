@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+    "name": "Name 1",
+    "category": "Category 1",
+    "color": "#ff9081",
+    "size": "M"
+  },
+  {
+    "id": 2,
+    "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+    "name": "Name 2",
+    "category": "Category 3",
+    "color": "#ffdb7c",
+    "size": "S"
+  },
+  {
+    "id": 3,
+    "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+    "name": "Name 3",
+    "category": "Category 3",
+    "color": "#FFD9C7",
+    "size": "S"
+  },
+  {
+    "id": 4,
+    "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+    "name": "Name 4",
+    "category": "Category 2",
+    "color": "#000000",
+    "size": "M"
+  },
+  {
+    "id": 5,
+    "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+    "name": "Name 5",
+    "category": "Category 1",
+    "color": "#CCC",
+    "size": "M"
+  },
+  {
+    "id": 6,
+    "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+    "name": "Name 6",
+    "category": "Category 4",
+    "color": "#CCC",
+    "size": "M"
+  },
+  {
+    "id": 7,
+    "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+    "name": "Name 7",
+    "category": "Category 5",
+    "color": "#CCC",
+    "size": "S"
+  }
+]

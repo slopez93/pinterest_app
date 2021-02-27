@@ -2,7 +2,6 @@ import {injectable, inject} from 'inversify';
 import {User} from '../../domain/entities/user';
 import {UserRepository} from '../../domain/repositories/userRepository';
 import {UserRemoteDataSource} from '../datasources/user/userRemoteDataSource';
-import {UserModel} from '../models/user';
 
 @injectable()
 export class UserRepositoryImpl implements UserRepository {
@@ -10,8 +9,8 @@ export class UserRepositoryImpl implements UserRepository {
     @inject('UserRemoteDataSource') private dataSource: UserRemoteDataSource,
   ) {}
 
-  async getUsers(): Promise<User[]> {
-    const users = await this.dataSource.getUsers();
-    return users.map((user: UserModel) => User.create(user.id, user.email));
+  async login(email: string, password: string): Promise<User> {
+    const user = await this.dataSource.login(email, password);
+    return User.create(user.name, user.token);
   }
 }

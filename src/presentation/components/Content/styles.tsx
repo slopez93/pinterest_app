@@ -21,4 +21,5 @@ export const Wrapper = styled.View`
   flex: 1;
   margin-right: 20px;
   margin-left: 20px;
+  margin-bottom: 20px;
 `;

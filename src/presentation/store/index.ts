@@ -5,9 +5,13 @@ import * as middlewares from './middlewares';
 
 import {LOGOUT} from './auth/types';
 
+import app from './app/reducer';
 import auth from './auth/reducer';
 
+import {intitSagas} from './sagas/initSagas';
+
 const reducers = combineReducers({
+  app,
   auth,
 });
 
@@ -31,3 +35,5 @@ export let store = createStore(
 );
 
 export let persistor = persistStore(store);
+
+intitSagas();
