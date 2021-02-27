@@ -1,14 +1,16 @@
 export class UserModel {
   public name: string;
   public token: string;
+  public pins: Array<object>;
 
-  constructor(name: string, token: string) {
+  constructor(name: string, token: string, pins: Array<object>) {
     this.name = name;
     this.token = token;
+    this.pins = pins;
   }
 
   static fromJSON(data: any): UserModel {
-    return new UserModel(data.name, data.token);
+    return new UserModel(data.name, data.token, data.pins);
   }
 
   static fromArrayJSON(data: any): Array<UserModel> {

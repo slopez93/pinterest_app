@@ -3,6 +3,7 @@ import {UserLoginUseCase} from '../../../../application/usecases/user/UserLoginU
 import {User} from '../../../../domain/entities/user';
 import {serviceLocator} from '../../../../shared/config/di';
 import {setIsLoading, setIsNotLoading} from '../../app/actions';
+import {loggedIn} from '../../auth/actions';
 import * as types from '../../auth/types';
 
 export function* login(action) {
@@ -11,8 +12,7 @@ export function* login(action) {
     const useCase = serviceLocator.get<UserLoginUseCase>('UserLoginUseCase');
     yield put(setIsLoading());
     const user: User = yield call([useCase, useCase.execute], email, password);
-    console.warn(user);
-    // yield put(loggedIn({}));
+    yield put(loggedIn(user));
   } catch (error) {
     console.log(error);
   } finally {

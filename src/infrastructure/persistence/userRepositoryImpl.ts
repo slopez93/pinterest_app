@@ -11,6 +11,7 @@ export class UserRepositoryImpl implements UserRepository {
 
   async login(email: string, password: string): Promise<User> {
     const user = await this.dataSource.login(email, password);
-    return User.create(user.name, user.token);
+
+    return User.create(user.name, user.token, user.pins);
   }
 }

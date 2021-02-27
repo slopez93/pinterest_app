@@ -1,7 +1,4 @@
 import styled from 'styled-components/native';
-import {Logo} from '../../assets/icons';
-
-export const LogoStyled = styled(Logo)``;
 
 export const Title = styled.Text`
   font-size: 32px;

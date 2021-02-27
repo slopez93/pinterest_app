@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {Content, TextInput, Button} from '../../components';
-import {LogoStyled, Title, FormWrapper, Wrapper} from './styles';
+import {Content, TextInput, Button, Header} from '../../components';
+import {Title, FormWrapper, Wrapper} from './styles';
 
 type Props = {
   email: string;
@@ -24,7 +24,7 @@ function View({
 }: Props) {
   return (
     <Content>
-      <LogoStyled />
+      <Header />
       <Wrapper>
         <Title>Log In</Title>
         <FormWrapper>

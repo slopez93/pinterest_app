@@ -5,6 +5,9 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 import {isLoggedInSelector} from '../store/auth/selectors';
 
+import {serviceLocator} from '../../shared/config/di';
+import {INavigation} from '../../infrastructure/services/navigation';
+
 import AuthNavigator from './auth-navigator';
 import AppNavigator from './app-navigator';
 
@@ -17,11 +20,12 @@ const MyTheme = {
 };
 
 function RootNavigation() {
+  const navigation = serviceLocator.get<INavigation>('INavigation');
   const isLoggedIn = useSelector(isLoggedInSelector);
 
   return (
     <SafeAreaProvider>
-      <NavigationContainer theme={MyTheme}>
+      <NavigationContainer ref={navigation.navigationRef} theme={MyTheme}>
         {isLoggedIn ? <AppNavigator /> : <AuthNavigator />}
       </NavigationContainer>
     </SafeAreaProvider>

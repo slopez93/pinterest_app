@@ -6,6 +6,10 @@ import {
   UserRemoteDataSourceImpl,
 } from '../../infrastructure/datasources/user/userRemoteDataSource';
 import {UserRepositoryImpl} from '../../infrastructure/persistence/userRepositoryImpl';
+import {
+  INavigation,
+  NavigationImpl,
+} from '../../infrastructure/services/navigation';
 import {HttpManager, HttpManagerImpl} from '../networking';
 
 const serviceLocator = new Container();
@@ -23,5 +27,6 @@ serviceLocator
 
 // Libraries
 serviceLocator.bind<HttpManager>('HttpManager').to(HttpManagerImpl);
+serviceLocator.bind<INavigation>('INavigation').to(NavigationImpl);
 
 export {serviceLocator};

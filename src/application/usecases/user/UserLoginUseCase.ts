@@ -12,7 +12,7 @@ export class UserLoginUseCase {
     try {
       return await this.userRepository.login(email, password);
     } catch (error) {
-      throw new Error('Error get users');
+      throw new Error(`Error get users: ${error.message}`);
     }
   }
 }
