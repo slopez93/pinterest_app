@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import {useNavigation} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
 import {isLoadingSelector} from '../../../../store/app/selectors';
 import {fetchDiscover} from '../../../../store/user/actions';
@@ -19,8 +20,11 @@ import {
   Category,
   Highlight,
 } from './styles';
+import {Pin} from '../../../../../domain/entities/pin';
+import {routes} from '../../../../../shared/config/routes';
 
 function Discover() {
+  const navigation = useNavigation();
   const dispatch = useDispatch();
   const isLoading = useSelector(isLoadingSelector);
   const discover = useSelector(discoverSelector);
@@ -28,6 +32,9 @@ function Discover() {
   useEffect(() => {
     dispatch(fetchDiscover());
   }, [dispatch]);
+
+  const handleItem = (pin: Pin): void =>
+    navigation.navigate(routes.discoverDetail, {id: pin.id});
 
   if (isLoading) {
     return <LoadingIndicator />;
@@ -53,7 +60,7 @@ function Discover() {
         {discover.categories?.map(({id, name, pins}) => (
           <Category key={id}>
             <Text>{name}</Text>
-            <GridView items={pins} />
+            <GridView items={pins} handleItem={handleItem} />
           </Category>
         ))}
       </Categories>
