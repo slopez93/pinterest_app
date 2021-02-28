@@ -2,20 +2,41 @@ import React from 'react';
 import {User} from '../../../domain/entities/user';
 import {Header, Content, Text} from '../../components';
 
-import {UserWrapper} from './styles';
+import {Pins, Discover} from './components';
+
+import {UserWrapper, Container, TabView, TabViewText} from './styles';
 
 type Props = {
+  tabs: Array<any>;
   user: User;
+  tabSelected: string;
+  handleTabView: any;
 };
 
-function View({user}: Props) {
+function View({tabs, user, tabSelected, handleTabView}: Props) {
   return (
     <Content>
       <Header />
       <UserWrapper>
         <Text size={27}>Hello</Text>
-        <Text size={28}>{user.name}</Text>
+        <Text fontFamily="Peacelove" size={33}>
+          {user.name}
+        </Text>
       </UserWrapper>
+      <TabView>
+        {tabs.map(({id, title}) => (
+          <TabViewText
+            key={id}
+            selected={tabSelected === id}
+            onPress={() => handleTabView(id)}>
+            {title}
+          </TabViewText>
+        ))}
+      </TabView>
+      <Container>
+        {tabSelected === 'pins' && <Pins />}
+        {tabSelected === 'discover' && <Discover />}
+      </Container>
     </Content>
   );
 }

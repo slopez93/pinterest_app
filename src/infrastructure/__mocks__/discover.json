@@ -1,0 +1,105 @@
+{
+  "highlight": {
+    "name": "Trending Now",
+    "pins": [
+      {
+        "id": 10,
+        "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+        "name": "Name 10",
+        "category": "Category 1",
+        "color": "#ff9081"
+      },
+      {
+        "id": 20,
+        "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+        "name": "Name 20",
+        "category": "Category 3",
+        "color": "#ffdb7c"
+      },
+      {
+        "id": 30,
+        "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+        "name": "Name 30",
+        "category": "Category 3",
+        "color": "#FFD9C7"
+      },
+      {
+        "id": 40,
+        "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+        "name": "Name 40",
+        "category": "Category 2",
+        "color": "#000000"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "1",
+      "name": "Daily Basics",
+      "pins": [
+        {
+          "id": 50,
+          "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+          "name": "Name 50",
+          "category": "Category 1",
+          "color": "#CCC"
+        },
+        {
+          "id": 60,
+          "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+          "name": "Name 60",
+          "category": "Category 4",
+          "color": "#CCC"
+        },
+        {
+          "id": 70,
+          "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+          "name": "Name 70",
+          "category": "Category 5",
+          "color": "#CCC"
+        },
+        {
+          "id": 80,
+          "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+          "name": "Name 80",
+          "category": "Category 5",
+          "color": "#CCC"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Office Time",
+      "pins": [
+        {
+          "id": 500,
+          "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+          "name": "Name 500",
+          "category": "Category 1",
+          "color": "#CCC"
+        },
+        {
+          "id": 600,
+          "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+          "name": "Name 600",
+          "category": "Category 4",
+          "color": "#CCC"
+        },
+        {
+          "id": 700,
+          "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+          "name": "Name 700",
+          "category": "Category 5",
+          "color": "#CCC"
+        },
+        {
+          "id": 800,
+          "thumbnail": "https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE",
+          "name": "Name 800",
+          "category": "Category 5",
+          "color": "#CCC"
+        }
+      ]
+    }
+  ]
+}

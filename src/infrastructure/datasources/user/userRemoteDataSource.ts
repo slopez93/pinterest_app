@@ -1,26 +1,41 @@
 import {inject, injectable} from 'inversify';
 import {HttpManager} from '../../../shared/networking';
-import {UserModel} from '../../models/user';
+import {DiscoverModel} from '../../models/discover';
+import {PinsModel} from '../../models/pins';
 
 export interface UserRemoteDataSource {
-  login(email: string, password: string): Promise<UserModel>;
+  discover(): Promise<DiscoverModel>;
+
+  pins(): Promise<PinsModel>;
 }
 
 @injectable()
 export class UserRemoteDataSourceImpl implements UserRemoteDataSource {
   constructor(@inject('HttpManager') private http: HttpManager) {}
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  async login(email: string, password: string): Promise<UserModel> {
+  async discover(): Promise<DiscoverModel> {
     try {
       const response = await new Promise((resolve) =>
         setTimeout(() => {
-          resolve(require('./login.json'));
+          resolve(require('../../__mocks__/discover.json'));
         }, 500),
       );
-      return UserModel.fromJSON(response);
+      return DiscoverModel.fromJSON(response);
     } catch (e) {
-      throw new Error('Failed to get user');
+      throw new Error('Failed fetch discover');
+    }
+  }
+
+  async pins(): Promise<PinsModel> {
+    try {
+      const response = await new Promise((resolve) =>
+        setTimeout(() => {
+          resolve(require('../../__mocks__/pins.json'));
+        }, 500),
+      );
+      return PinsModel.fromJSON({pins: response});
+    } catch (e) {
+      throw new Error('Failed fetch pins');
     }
   }
 }

@@ -1,11 +1,15 @@
 import {Container} from 'inversify';
-import {UserLoginUseCase} from '../../application/usecases/user/UserLoginUseCase';
+import {AuthLoginUseCase} from '../../application/usecases/AuthLoginUseCase';
+import {GetDiscoverUseCase} from '../../application/usecases/GetDiscoverUseCase';
+import {GetUserPinsUseCase} from '../../application/usecases/GetUserPinsUseCase';
 import {UserRepository} from '../../domain/repositories/userRepository';
+import {AuthenticationService} from '../../domain/services/authentication';
 import {
   UserRemoteDataSource,
   UserRemoteDataSourceImpl,
 } from '../../infrastructure/datasources/user/userRemoteDataSource';
 import {UserRepositoryImpl} from '../../infrastructure/persistence/userRepositoryImpl';
+import {AuthenticationImpl} from '../../infrastructure/services/authentication';
 import {
   INavigation,
   NavigationImpl,
@@ -15,7 +19,18 @@ import {HttpManager, HttpManagerImpl} from '../networking';
 const serviceLocator = new Container();
 
 // UseCases
-serviceLocator.bind<UserLoginUseCase>('UserLoginUseCase').to(UserLoginUseCase);
+serviceLocator.bind<AuthLoginUseCase>('AuthLoginUseCase').to(AuthLoginUseCase);
+serviceLocator
+  .bind<GetUserPinsUseCase>('GetUserPinsUseCase')
+  .to(GetUserPinsUseCase);
+serviceLocator
+  .bind<GetDiscoverUseCase>('GetDiscoverUseCase')
+  .to(GetDiscoverUseCase);
+
+// Services
+serviceLocator
+  .bind<AuthenticationService>('AuthenticationService')
+  .to(AuthenticationImpl);
 
 /// Repositories
 serviceLocator.bind<UserRepository>('UserRepository').to(UserRepositoryImpl);

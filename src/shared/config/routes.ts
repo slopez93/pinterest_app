@@ -5,4 +5,5 @@ type Routes = {
 export const routes: Routes = {
   login: 'Login',
   home: 'Home',
+  pinDetail: 'PinDetail',
 };

@@ -7,12 +7,14 @@ import {LOGOUT} from './auth/types';
 
 import app from './app/reducer';
 import auth from './auth/reducer';
+import user from './user/reducer';
 
 import {intitSagas} from './sagas/initSagas';
 
 const reducers = combineReducers({
   app,
   auth,
+  user,
 });
 
 const rootReducer = (state: any, action: any) => {

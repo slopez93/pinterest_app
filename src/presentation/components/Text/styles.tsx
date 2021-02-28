@@ -5,4 +5,5 @@ export const TextStyled = styled.Text`
   margin-bottom: ${({mb}) => `${mb}px`};
   color: ${({color}) => color};
   font-size: ${({size}) => size};
+  ${({fontFamily}) => fontFamily && `font-family: ${fontFamily};`}
 `;
