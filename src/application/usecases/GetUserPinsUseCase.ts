@@ -1,8 +1,7 @@
 import {inject, injectable} from 'inversify';
-import {Pin} from '../../domain/entities/pin';
 import {UserRemoteDataSource} from '../../infrastructure/datasources/user/userRemoteDataSource';
 
-import {PinsModel} from '../../infrastructure/models/pins';
+import {Pin, PinsModel} from '../../infrastructure/models/pins';
 
 @injectable()
 export class GetUserPinsUseCase {
@@ -13,16 +12,7 @@ export class GetUserPinsUseCase {
   async execute(): Promise<Pin[]> {
     try {
       const response: PinsModel = await this.dataSource.pins();
-      return response.pins.map((pin) =>
-        Pin.create(
-          pin.id,
-          pin.name,
-          pin.thumbnail,
-          pin.category,
-          pin.category,
-          pin.size || '',
-        ),
-      );
+      return response.pins;
     } catch (error) {
       throw new Error(`Error fetch pins: ${error.message}`);
     }

@@ -10,18 +10,24 @@ type ContentProps = {
   children: React.ReactNode;
   testID?: string;
   scrollable?: boolean;
+  ml: number;
+  mr: number;
 };
 
-function Content({children, testID, scrollable}: ContentProps) {
+function Content({children, testID, scrollable, mr, ml}: ContentProps) {
   return (
     <KeyboardScrollView enableOnAndroid={false} extraScrollHeight={100}>
       <SafeAreaViewStyled>
         {scrollable ? (
           <ScrollView>
-            <Wrapper testID={testID}>{children}</Wrapper>
+            <Wrapper testID={testID} mr={mr} ml={ml}>
+              {children}
+            </Wrapper>
           </ScrollView>
         ) : (
-          <Wrapper testID={testID}>children</Wrapper>
+          <Wrapper testID={testID} mr={mr} ml={ml}>
+            children
+          </Wrapper>
         )}
       </SafeAreaViewStyled>
     </KeyboardScrollView>
@@ -30,6 +36,8 @@ function Content({children, testID, scrollable}: ContentProps) {
 
 Content.defaultProps = {
   scrollable: true,
+  mr: 20,
+  ml: 20,
 };
 
 export default Content;

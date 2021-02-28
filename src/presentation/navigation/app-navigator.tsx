@@ -7,6 +7,18 @@ import {HomeScreen, PinDetail, DiscoverDetail} from '../screens';
 
 const Stack = createStackNavigator();
 
+// TODO: Move styles in a shared navigation style object, NOT INLINE
+const styles = {
+  title: '',
+  headerStyle: {
+    backgroundColor: '#ededed',
+    zIndex: 100,
+    elevation: 0,
+    shadowOpacity: 0,
+    borderBottomWidth: 0,
+  },
+};
+
 function AppNavigator() {
   return (
     <Stack.Navigator>
@@ -15,8 +27,20 @@ function AppNavigator() {
         component={HomeScreen}
         options={{headerShown: false}}
       />
-      <Stack.Screen name={routes.pinDetail} component={PinDetail} />
-      <Stack.Screen name={routes.discoverDetail} component={DiscoverDetail} />
+      <Stack.Screen
+        name={routes.pinDetail}
+        component={PinDetail}
+        options={{
+          ...styles,
+        }}
+      />
+      <Stack.Screen
+        name={routes.discoverDetail}
+        component={DiscoverDetail}
+        options={{
+          ...styles,
+        }}
+      />
     </Stack.Navigator>
   );
 }

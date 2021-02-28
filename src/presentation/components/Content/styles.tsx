@@ -19,7 +19,7 @@ export const ScrollView = styled.ScrollView.attrs({
 
 export const Wrapper = styled.View`
   flex: 1;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: ${({mr}) => `${mr}px`};
+  margin-left: ${({ml}) => `${ml}px`};
   margin-bottom: 20px;
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import {Pressable} from 'react-native';
 
 export const Content = styled.View``;
 
@@ -12,7 +13,7 @@ export const ScrollView = styled.ScrollView.attrs({
   margin-top: 5px;
 `;
 
-export const HighlightItem = styled.View`
+export const HighlightItem = styled(Pressable)`
   width: 220px;
   margin-right: 30px;
 `;

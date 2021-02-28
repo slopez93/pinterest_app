@@ -46,7 +46,7 @@ function Discover() {
         <Text>{discover.highlight?.name}</Text>
         <ScrollView>
           {discover.highlight?.pins.map((pin) => (
-            <HighlightItem key={pin.id}>
+            <HighlightItem key={pin.id} onPress={handleItem}>
               <PinCard
                 name={pin.name}
                 category={pin.category}

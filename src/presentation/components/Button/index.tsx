@@ -8,8 +8,13 @@ type InputProps = {
   disabled?: boolean;
   loading?: boolean;
   onPress?: () => void;
-  mt?: number;
-  mb?: number;
+  bgColor: string;
+  borderColor: string;
+  textColor: string;
+  pv: number;
+  ph: number;
+  mt: number;
+  mb: number;
 };
 
 function Button({
@@ -18,6 +23,11 @@ function Button({
   disabled,
   loading,
   onPress,
+  bgColor,
+  borderColor,
+  textColor,
+  pv,
+  ph,
   mt,
   mb,
 }: InputProps) {
@@ -28,6 +38,11 @@ function Button({
       disabled={disabled}
       loading={loading}
       onPress={onPress}
+      bgColor={bgColor}
+      textColor={textColor}
+      pv={pv}
+      ph={ph}
+      borderColor={borderColor}
       mt={mt}
       mb={mb}
     />
@@ -37,6 +52,11 @@ function Button({
 Button.defaultProps = {
   mt: 0,
   mb: 0,
+  pv: 12,
+  ph: 15,
+  bgColor: '#e60022',
+  borderColor: 'transparent',
+  textColor: '#fff',
 };
 
 export default Button;
