@@ -10,7 +10,7 @@ import {persistor, store} from './store';
 
 import AppNavigator from './navigation';
 
-// TODO: Create styled components theme to use all colors, fonts...
+// TODO: Create styled components theme to use all colors, fonts... and use Provider styled
 
 const App = () => {
   return (
