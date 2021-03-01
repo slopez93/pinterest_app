@@ -19,12 +19,12 @@ function Discover() {
 
   useEffect(() => {
     dispatch(fetchPins());
-  }, [dispatch]);
+  }, []);
 
   const handleItem = (pin: Pin): void =>
     navigation.navigate(routes.pinDetail, {id: pin.id});
 
-  if (isLoading) {
+  if (!pins && isLoading) {
     return <LoadingIndicator />;
   }
 

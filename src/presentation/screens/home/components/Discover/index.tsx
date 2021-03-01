@@ -31,21 +31,22 @@ function Discover() {
 
   useEffect(() => {
     dispatch(fetchDiscover());
-  }, [dispatch]);
+  }, []);
 
   const handleItem = (pin: Pin): void =>
     navigation.navigate(routes.discoverDetail, {id: pin.id});
 
-  if (isLoading) {
+  // TODO: Create a sagaStatus selector for catch when is saga is loading, done and finish
+  if (!discover && isLoading) {
     return <LoadingIndicator />;
   }
 
   return (
     <Content>
       <Highlight>
-        <Text>{discover.highlight?.name}</Text>
+        <Text>{discover?.highlight?.name}</Text>
         <ScrollView>
-          {discover.highlight?.pins.map((pin) => (
+          {discover?.highlight?.pins.map((pin) => (
             <HighlightItem key={pin.id} onPress={handleItem}>
               <PinCard
                 name={pin.name}
@@ -57,7 +58,7 @@ function Discover() {
         </ScrollView>
       </Highlight>
       <Categories>
-        {discover.categories?.map(({id, name, pins}) => (
+        {discover?.categories?.map(({id, name, pins}) => (
           <Category key={id}>
             <Text>{name}</Text>
             <GridView items={pins} handleItem={handleItem} />

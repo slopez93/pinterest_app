@@ -2,16 +2,14 @@ import React from 'react';
 
 import {ScrollView, Image} from './styles';
 
-const IMAGES = [
-  'https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE',
-  'https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE',
-  'https://plchldr.co/i/144x196?&bg=eee&fc=Ccc&text=IMAGE',
-];
+type Props = {
+  images: Array<string>;
+};
 
-function PinSlider() {
+function PinSlider({images}: Props) {
   return (
     <ScrollView>
-      {IMAGES.map((img, key) => (
+      {images?.map((img, key) => (
         <Image key={key} source={{uri: img}} />
       ))}
     </ScrollView>

@@ -12,7 +12,7 @@ export function* login(action) {
     const useCase = serviceLocator.get<AuthLoginUseCase>('AuthLoginUseCase');
     yield put(setIsLoading());
     const user: User = yield call([useCase, useCase.execute], email, password);
-    yield put(loggedIn(user));
+    yield put(loggedIn(user.toJSON()));
   } catch (error) {
     console.log(error);
   } finally {

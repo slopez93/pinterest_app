@@ -1,7 +1,6 @@
 export class User {
   private _name: string;
   private _token: string;
-  // private _pins: Pin[] = [];
 
   constructor(name: string, token: string) {
     this._name = name;
@@ -19,5 +18,12 @@ export class User {
 
   public get token() {
     return this._token;
+  }
+
+  public toJSON() {
+    return {
+      name: this.name,
+      token: this.token,
+    };
   }
 }

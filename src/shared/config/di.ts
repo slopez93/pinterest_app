@@ -1,6 +1,8 @@
 import {Container} from 'inversify';
 import {AuthLoginUseCase} from '../../application/usecases/AuthLoginUseCase';
+import {GetDiscoverDetailUseCase} from '../../application/usecases/GetDiscoverDetailUseCase';
 import {GetDiscoverUseCase} from '../../application/usecases/GetDiscoverUseCase';
+import {GetPinDetailUseCase} from '../../application/usecases/GetPinDetailUseCase';
 import {GetUserPinsUseCase} from '../../application/usecases/GetUserPinsUseCase';
 import {UserRepository} from '../../domain/repositories/userRepository';
 import {AuthenticationService} from '../../domain/services/authentication';
@@ -26,6 +28,12 @@ serviceLocator
 serviceLocator
   .bind<GetDiscoverUseCase>('GetDiscoverUseCase')
   .to(GetDiscoverUseCase);
+serviceLocator
+  .bind<GetPinDetailUseCase>('GetPinDetailUseCase')
+  .to(GetPinDetailUseCase);
+serviceLocator
+  .bind<GetDiscoverDetailUseCase>('GetDiscoverDetailUseCase')
+  .to(GetDiscoverDetailUseCase);
 
 // Services
 serviceLocator

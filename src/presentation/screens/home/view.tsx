@@ -15,7 +15,7 @@ type Props = {
 
 function View({tabs, user, tabSelected, handleTabView}: Props) {
   return (
-    <Content>
+    <Content mr={5} ml={5}>
       <Header />
       <UserWrapper>
         <Text size={27}>Hello</Text>

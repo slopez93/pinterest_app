@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "name": "Name",
+  "category": "category",
+  "description": "Ab quia minus magnam. Voluptatem cumque pariatur rem ducimus assumenda minima provident. Eveniet velit quo perferendis blanditiis molestiae",
+  "images": [
+    "https://plchldr.co/i/512x512?&bg=eee&fc=Ccc&text=IMAGE/1",
+    "https://plchldr.co/i/512x512?&bg=eee&fc=Ccc&text=IMAGE/2",
+    "https://plchldr.co/i/512x512?&bg=eee&fc=Ccc&text=IMAGE/3"
+  ],
+  "size": "M",
+  "sizes": ["XS", "S", "M", "L", "XL"]
+}

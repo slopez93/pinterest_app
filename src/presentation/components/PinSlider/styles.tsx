@@ -15,6 +15,6 @@ export const ScrollView = styled.ScrollView.attrs({
 `;
 
 export const Image = styled.Image`
-  width: ${Dimensions.get('window').width};
-  height: ${Dimensions.get('window').height * 0.5};
+  width: ${`${Dimensions.get('window').width}px`};
+  height: ${`${Dimensions.get('window').height * 0.5}px`};
 `;

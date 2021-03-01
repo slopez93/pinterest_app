@@ -12,7 +12,6 @@ const styles = {
   title: '',
   headerStyle: {
     backgroundColor: '#ededed',
-    zIndex: 100,
     elevation: 0,
     shadowOpacity: 0,
     borderBottomWidth: 0,
