@@ -8,7 +8,7 @@ export class GetPinDetailUseCase {
     @inject('UserRemoteDataSource') private dataSource: UserRemoteDataSource,
   ) {}
 
-  async execute(id: string): Promise<PinDetailModel> {
+  async execute(id: number): Promise<PinDetailModel> {
     try {
       return await this.dataSource.pinDetail(id);
     } catch (error) {

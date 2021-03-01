@@ -9,8 +9,8 @@ import {PinsModel} from '../../models/pins';
 export interface UserRemoteDataSource {
   discover(): Promise<DiscoverModel>;
   pins(): Promise<PinsModel>;
-  pinDetail(id: string): Promise<PinDetailModel>;
-  discoverDetail(id: string): Promise<DiscoverDetailModel>;
+  pinDetail(id: number): Promise<PinDetailModel>;
+  discoverDetail(id: number): Promise<DiscoverDetailModel>;
 }
 
 @injectable()
@@ -43,7 +43,7 @@ export class UserRemoteDataSourceImpl implements UserRemoteDataSource {
     }
   }
 
-  async pinDetail(id: string): Promise<PinDetailModel> {
+  async pinDetail(id: number): Promise<PinDetailModel> {
     try {
       const response = await new Promise((resolve) =>
         setTimeout(() => {
@@ -56,7 +56,7 @@ export class UserRemoteDataSourceImpl implements UserRemoteDataSource {
     }
   }
 
-  async discoverDetail(id: string): Promise<DiscoverDetailModel> {
+  async discoverDetail(id: number): Promise<DiscoverDetailModel> {
     try {
       const response = await new Promise((resolve) =>
         setTimeout(() => {

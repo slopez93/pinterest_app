@@ -9,7 +9,7 @@ function Collection({items, columns, handleItem}: any) {
       data={items}
       renderItem={({item}) => {
         return (
-          <Item onPress={() => handleItem(item)}>
+          <Item testID="gridViewItem" onPress={() => handleItem(item)}>
             <ItemBackground source={{uri: item.thumbnail}}>
               <ItemContainer>
                 <Text>{item.name}</Text>

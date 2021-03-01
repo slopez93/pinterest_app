@@ -8,7 +8,7 @@ export class GetDiscoverDetailUseCase {
     @inject('UserRemoteDataSource') private dataSource: UserRemoteDataSource,
   ) {}
 
-  async execute(id: string): Promise<DiscoverDetailModel> {
+  async execute(id: number): Promise<DiscoverDetailModel> {
     try {
       return await this.dataSource.discoverDetail(id);
     } catch (error) {

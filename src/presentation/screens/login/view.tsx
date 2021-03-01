@@ -29,18 +29,21 @@ function View({
         <Title>Log In</Title>
         <FormWrapper>
           <TextInput
+            testID="email"
             placeholder="Email"
             value={email}
             onChange={setEmail}
             mb={25}
           />
           <TextInput
+            testID="password"
             secureTextEntry
             placeholder="Password"
             value={password}
             onChange={setPassword}
           />
           <Button
+            testID="loginButton"
             title="LOG IN WITH EMAIL"
             onPress={handleSubmit}
             disabled={!isFormValid}

@@ -13,7 +13,7 @@ export class AuthLoginUseCase {
     try {
       return await this.authenticationService.login(email, password);
     } catch (error) {
-      throw new Error(`Error get users: ${error.message}`);
+      throw new Error(`Error login user: ${error.message}`);
     }
   }
 }

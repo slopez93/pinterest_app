@@ -9,17 +9,17 @@ export const FlatListStyled = styled.FlatList`
 export const Item = styled(Pressable)`
   flex: 1;
   flex-direction: column;
-  margin-vertical: 10;
-  margin-horizontal: 10;
+  margin-vertical: 10px;
+  margin-horizontal: 10px;
 `;
 
 export const ItemContainer = styled.View`
   flex: 1;
   justify-content: flex-end;
-  margin-bottom: 10;
-  margin-left: 10;
+  margin-bottom: 10px;
+  margin-left: 10px;
 `;
 
 export const ItemBackground = styled.ImageBackground`
-  height: 210;
+  height: 210px;
 `;
