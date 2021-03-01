@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {GetPinDetailUseCase} from '../../../application/usecases/GetPinDetailUseCase';
 import {PinDetailModel} from '../../../infrastructure/models/pinDetail';
+import {ICamera} from '../../../infrastructure/services/camera';
 import {serviceLocator} from '../../../shared/config/di';
 
 import View from './view';
@@ -20,7 +21,15 @@ function PinDetail({route}) {
     fetch();
   }, []);
 
-  return <View pinDetail={pinDetail} />;
+  const handleCamera = (): void => {
+    const camera = serviceLocator.get<ICamera>('ICamera');
+    camera.launchCamera(null, (response) => {
+      // TODO: Do anything, add response.image to carrousel
+      console.warn(response);
+    });
+  };
+
+  return <View pinDetail={pinDetail} handleCamera={handleCamera} />;
 }
 
 export default PinDetail;

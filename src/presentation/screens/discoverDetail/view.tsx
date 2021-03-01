@@ -42,7 +42,7 @@ function View({discoverDetail, hasSize, handleSize}: Props) {
   } = discoverDetail;
 
   return (
-    <Content ml={0} mr={0}>
+    <Content safeAreaEdges={['bottom']} ml={0} mr={0}>
       <PinSlider images={images} />
       <ViewComponent mt={20} ml={20} mr={20}>
         <ViewComponent dir="row" justify="space-between">

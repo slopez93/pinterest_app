@@ -15,9 +15,10 @@ import {
 
 type Props = {
   pinDetail: PinDetailModel | undefined;
+  handleCamera: () => void;
 };
 
-function View({pinDetail}: Props) {
+function View({pinDetail, handleCamera}: Props) {
   if (!pinDetail) {
     return (
       <ViewComponent flex={1} align="center" justify="center">
@@ -29,7 +30,7 @@ function View({pinDetail}: Props) {
   const {name, category, images, sizes, size} = pinDetail;
 
   return (
-    <Content ml={0} mr={0}>
+    <Content safeAreaEdges={['bottom']} ml={0} mr={0}>
       <PinSlider images={images} />
       <ViewComponent mt={20} ml={20} mr={20}>
         <ViewComponent dir="row" justify="space-between">
@@ -44,7 +45,7 @@ function View({pinDetail}: Props) {
           bgColor="#fff"
           borderColor="#000"
           mt={20}
-          onPress={() => {}}
+          onPress={handleCamera}
         />
         <PinDescription>
           Lorem Ipsum is simply dummy text of the printing and typesetting

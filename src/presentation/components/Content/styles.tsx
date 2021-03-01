@@ -2,7 +2,11 @@ import styled from 'styled-components/native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
-export const SafeAreaViewStyled = styled(SafeAreaView)`
+export const SafeAreaViewStyled = styled(SafeAreaView).attrs(
+  ({safeAreaEdges}) => ({
+    edges: safeAreaEdges,
+  }),
+)`
   flex: 1;
 `;
 

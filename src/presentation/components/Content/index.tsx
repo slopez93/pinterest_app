@@ -10,14 +10,22 @@ type ContentProps = {
   children: React.ReactNode;
   testID?: string;
   scrollable?: boolean;
+  safeAreaEdges: Array<string>;
   ml: number;
   mr: number;
 };
 
-function Content({children, testID, scrollable, mr, ml}: ContentProps) {
+function Content({
+  children,
+  testID,
+  scrollable,
+  safeAreaEdges,
+  mr,
+  ml,
+}: ContentProps) {
   return (
     <KeyboardScrollView enableOnAndroid={false} extraScrollHeight={100}>
-      <SafeAreaViewStyled>
+      <SafeAreaViewStyled safeAreaEdges={safeAreaEdges}>
         {scrollable ? (
           <ScrollView>
             <Wrapper testID={testID} mr={mr} ml={ml}>
@@ -36,6 +44,7 @@ function Content({children, testID, scrollable, mr, ml}: ContentProps) {
 
 Content.defaultProps = {
   scrollable: true,
+  safeAreaEdges: ['top', 'left', 'right', 'bottom'],
   mr: 20,
   ml: 20,
 };

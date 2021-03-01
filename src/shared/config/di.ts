@@ -12,6 +12,7 @@ import {
 } from '../../infrastructure/datasources/user/userRemoteDataSource';
 import {UserRepositoryImpl} from '../../infrastructure/persistence/userRepositoryImpl';
 import {AuthenticationImpl} from '../../infrastructure/services/authentication';
+import {CameraImpl, ICamera} from '../../infrastructure/services/camera';
 import {
   INavigation,
   NavigationImpl,
@@ -51,5 +52,6 @@ serviceLocator
 // Libraries
 serviceLocator.bind<HttpManager>('HttpManager').to(HttpManagerImpl);
 serviceLocator.bind<INavigation>('INavigation').to(NavigationImpl);
+serviceLocator.bind<ICamera>('ICamera').to(CameraImpl);
 
 export {serviceLocator};

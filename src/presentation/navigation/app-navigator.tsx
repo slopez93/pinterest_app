@@ -10,6 +10,7 @@ const Stack = createStackNavigator();
 // TODO: Move styles in a shared navigation style object, NOT INLINE
 const styles = {
   title: '',
+  headerBackTitleVisible: false,
   headerStyle: {
     backgroundColor: '#ededed',
     elevation: 0,
