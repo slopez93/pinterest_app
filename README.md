@@ -6,7 +6,7 @@
 
 - Used inversify as dependency injection container
   
-- Create a theme provider for styled component and save all font colors ...
+- Create a theme provider for styled component and save all font colors and utils for transform px in density screen
   
 - For the management of the side effects that used redux sagas, also used the calls directly in the view so that both options of use are seen.
   
