@@ -1,8 +1,8 @@
 # Lookiero app
 
-TO-DO:
+***TODO:***
 
-** I leave a few points to keep in mind **
+**I leave a few points to keep in mind**
 
 - Used inversify as dependency injection container
   
@@ -21,6 +21,9 @@ TO-DO:
 - The discover price of a specific item I have created the metedo in the entity that returns the price with the currency (principle say, do not ask)
   
 - I have created a Navigation Service through an interface to uncouple it from the specific library, it would be necessary to save its reference so that through the service locator we can use it
+  
+- Implementing react-native-config for manage environments and flavors
 
-* For an average project I understand that it is not necessary to assemble a type of complex architecture simply by structuring the components, application state and others, it could well simplify creating services for side effects and it would look simpler *
+
+  *For an average project I understand that it is not necessary to assemble a type of complex architecture simply by structuring the components, application state and others, it could well simplify creating services for side effects and it would look simpler*
 
