@@ -23,7 +23,7 @@ function View({
   isLoading,
 }: Props) {
   return (
-    <Content>
+    <Content scrollable={false}>
       <Header />
       <Wrapper>
         <Title>Log In</Title>

@@ -24,21 +24,21 @@ function Content({
   ml,
 }: ContentProps) {
   return (
-    <KeyboardScrollView enableOnAndroid={false} extraScrollHeight={100}>
-      <SafeAreaViewStyled safeAreaEdges={safeAreaEdges}>
-        {scrollable ? (
+    <SafeAreaViewStyled safeAreaEdges={safeAreaEdges}>
+      {scrollable ? (
+        <KeyboardScrollView enableOnAndroid={false} extraScrollHeight={100}>
           <ScrollView>
             <Wrapper testID={testID} mr={mr} ml={ml}>
               {children}
             </Wrapper>
           </ScrollView>
-        ) : (
-          <Wrapper testID={testID} mr={mr} ml={ml}>
-            children
-          </Wrapper>
-        )}
-      </SafeAreaViewStyled>
-    </KeyboardScrollView>
+        </KeyboardScrollView>
+      ) : (
+        <Wrapper testID={testID} mr={mr} ml={ml}>
+          {children}
+        </Wrapper>
+      )}
+    </SafeAreaViewStyled>
   );
 }
 
