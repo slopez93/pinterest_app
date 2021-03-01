@@ -23,6 +23,8 @@
 - I have created a Navigation Service through an interface to uncouple it from the specific library, it would be necessary to save its reference so that through the service locator we can use it
   
 - Implementing react-native-config for manage environments and flavors
+  
+- Pending styling details like a dot carrousel... because its delay long time in all details
 
 
   *For an average project I understand that it is not necessary to assemble a type of complex architecture simply by structuring the components, application state and others, it could well simplify creating services for side effects and it would look simpler*
