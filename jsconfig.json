@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "paths": {
+      "~/*": ["src/*"],
+      "@Application/*": ["src/application/*"],
+      "@Domain/*": ["src/domain/*"],
+      "@Infrastructure/*": ["src/infrastructure/*"],
+      "@Shared/*": ["src/shared/*"],
+      "@Navigation/*": ["src/presentation/navigation/*"],
+      "@Screens/*": ["src/presentation/screens/*"],
+      "@Components/*": ["src/presentation/components/*"],
+      "@Assets/*": ["src/presentation/assets/*"],
+      "@Store/*": ["src/presentation/store/*"]
+    }
+  },
+  "exclude": ["coverage", "dist", "node_modules"]
+}

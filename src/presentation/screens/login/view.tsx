@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Content, TextInput, Button, Header} from '../../components';
+import {Content, TextInput, Button, Header} from '@Components/index';
 import {Title, FormWrapper, Wrapper} from './styles';
 
 type Props = {

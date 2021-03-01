@@ -1,6 +1,6 @@
 import React from 'react';
-import {User} from '../../../domain/entities/user';
-import {Header, Content, Text} from '../../components';
+import {User} from '@Domain/entities/user';
+import {Header, Content, Text} from '@Components/index';
 
 import {Pins, Discover} from './components';
 

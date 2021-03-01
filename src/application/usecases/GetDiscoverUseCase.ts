@@ -1,6 +1,6 @@
 import {inject, injectable} from 'inversify';
-import {UserRemoteDataSource} from '../../infrastructure/datasources/user/userRemoteDataSource';
-import {DiscoverModel} from '../../infrastructure/models/discover';
+import {UserRemoteDataSource} from '@Infrastructure/datasources/user/userRemoteDataSource';
+import {DiscoverModel} from '@Infrastructure/models/discover';
 
 @injectable()
 export class GetDiscoverUseCase {

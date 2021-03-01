@@ -1,6 +1,6 @@
 import {inject, injectable} from 'inversify';
-import {UserRemoteDataSource} from '../../infrastructure/datasources/user/userRemoteDataSource';
-import {PinDetailModel} from '../../infrastructure/models/pinDetail';
+import {UserRemoteDataSource} from '@Infrastructure/datasources/user/userRemoteDataSource';
+import {PinDetailModel} from '@Infrastructure/models/pinDetail';
 
 @injectable()
 export class GetPinDetailUseCase {

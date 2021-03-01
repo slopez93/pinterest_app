@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
-import {userSelector} from '../../store/auth/selectors';
+import {userSelector} from '@Store/auth/selectors';
 
 import View from './view';
 

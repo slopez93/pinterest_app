@@ -1,5 +1,5 @@
 import React from 'react';
-import {DiscoverDetailModel} from '../../../infrastructure/models/discoverDetail';
+import {DiscoverDetailModel} from '@Infrastructure/models/discoverDetail';
 import {
   Button,
   Content,
@@ -12,7 +12,7 @@ import {
   PinCategory,
   View as ViewComponent,
   LoadingIndicator,
-} from '../../components';
+} from '@Components/index';
 
 type Props = {
   discoverDetail: DiscoverDetailModel | undefined;

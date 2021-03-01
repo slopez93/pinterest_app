@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import {injectable} from 'inversify';
-import {User} from '../../domain/entities/user';
-import {AuthenticationService} from '../../domain/services/authentication';
+import {User} from '@Domain/entities/user';
+import {AuthenticationService} from '@Domain/services/authentication';
 
 type UserCredential = {
   name: string;

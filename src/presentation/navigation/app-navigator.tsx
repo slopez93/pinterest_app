@@ -1,9 +1,9 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {routes} from '../../shared/config/routes';
+import {routes} from '@Shared/config/routes';
 
-import {HomeScreen, PinDetail, DiscoverDetail} from '../screens';
+import {HomeScreen, PinDetail, DiscoverDetail} from '@Screens/index';
 
 const Stack = createStackNavigator();
 

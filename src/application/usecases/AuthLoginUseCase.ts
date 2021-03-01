@@ -1,6 +1,6 @@
 import {inject, injectable} from 'inversify';
-import {User} from '../../domain/entities/user';
-import {AuthenticationService} from '../../domain/services/authentication';
+import {User} from '@Domain/entities/user';
+import {AuthenticationService} from '@Domain/services/authentication';
 
 @injectable()
 export class AuthLoginUseCase {

@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import {GetPinDetailUseCase} from '../../../application/usecases/GetPinDetailUseCase';
-import {PinDetailModel} from '../../../infrastructure/models/pinDetail';
-import {ICamera} from '../../../infrastructure/services/camera';
-import {serviceLocator} from '../../../shared/config/di';
+import {GetPinDetailUseCase} from '@Application/usecases/GetPinDetailUseCase';
+import {PinDetailModel} from '@Infrastructure/models/pinDetail';
+import {ICamera} from '@Infrastructure/services/camera';
+import {serviceLocator} from '@Shared/config/di';
 
 import View from './view';
 

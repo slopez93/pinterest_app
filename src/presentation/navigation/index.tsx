@@ -3,10 +3,10 @@ import {useSelector} from 'react-redux';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
-import {isLoggedInSelector} from '../store/auth/selectors';
+import {isLoggedInSelector} from '@Store/auth/selectors';
 
-import {serviceLocator} from '../../shared/config/di';
-import {INavigation} from '../../infrastructure/services/navigation';
+import {serviceLocator} from '@Shared/config/di';
+import {INavigation} from '@Infrastructure/services/navigation';
 
 import AuthNavigator from './auth-navigator';
 import AppNavigator from './app-navigator';

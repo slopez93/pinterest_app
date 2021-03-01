@@ -13,9 +13,23 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
+    "skipLibCheck": true,
     "emitDecoratorMetadata": true,
     "useDefineForClassFields": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      "@Application/*": ["./src/application/*"],
+      "@Domain/*": ["./src/domain/*"],
+      "@Infrastructure/*": ["./src/infrastructure/*"],
+      "@Shared/*": ["./src/shared/*"],
+      "@Navigation/*": ["./src/presentation/navigation/*"],
+      "@Screens/*": ["./src/presentation/screens/*"],
+      "@Components/*": ["./src/presentation/components/*"],
+      "@Assets/*": ["./src/presentation/assets/*"],
+      "@Store/*": ["./src/presentation/store/*"]
+    }
   },
   "exclude": [
     "node_modules",

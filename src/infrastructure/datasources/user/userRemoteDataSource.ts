@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import {inject, injectable} from 'inversify';
-import {HttpManager} from '../../../shared/networking';
+import {HttpManager} from '@Shared/networking';
 import {DiscoverModel} from '../../models/discover';
 import {DiscoverDetailModel} from '../../models/discoverDetail';
 import {PinDetailModel} from '../../models/pinDetail';

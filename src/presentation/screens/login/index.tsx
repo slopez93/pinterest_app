@@ -1,7 +1,7 @@
 import React, {useState, useMemo} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {isLoadingSelector} from '../../store/app/selectors';
-import {login} from '../../store/auth/actions';
+import {isLoadingSelector} from '@Store/app/selectors';
+import {login} from '@Store/auth/actions';
 
 import View from './view';
 

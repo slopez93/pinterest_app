@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useMemo} from 'react';
-import {GetDiscoverDetailUseCase} from '../../../application/usecases/GetDiscoverDetailUseCase';
-import {DiscoverDetailModel} from '../../../infrastructure/models/discoverDetail';
-import {serviceLocator} from '../../../shared/config/di';
+import {GetDiscoverDetailUseCase} from '@Application/usecases/GetDiscoverDetailUseCase';
+import {DiscoverDetailModel} from '@Infrastructure/models/discoverDetail';
+import {serviceLocator} from '@Shared/config/di';
 
 import View from './view';
 

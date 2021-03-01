@@ -1,7 +1,7 @@
 import {inject, injectable} from 'inversify';
-import {UserRemoteDataSource} from '../../infrastructure/datasources/user/userRemoteDataSource';
+import {UserRemoteDataSource} from '@Infrastructure/datasources/user/userRemoteDataSource';
 
-import {Pin, PinsModel} from '../../infrastructure/models/pins';
+import {Pin, PinsModel} from '@Infrastructure/models/pins';
 
 @injectable()
 export class GetUserPinsUseCase {

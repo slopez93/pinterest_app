@@ -1,16 +1,13 @@
 import React, {useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
-import {isLoadingSelector} from '../../../../store/app/selectors';
-import {fetchDiscover} from '../../../../store/user/actions';
-import {discoverSelector} from '../../../../store/user/selectors';
+import {Pin} from '@Domain/entities/pin';
+import {isLoadingSelector} from '@Store/app/selectors';
+import {fetchDiscover} from '@Store/user/actions';
+import {discoverSelector} from '@Store/user/selectors';
+import {routes} from '@Shared/config/routes';
 
-import {
-  GridView,
-  LoadingIndicator,
-  PinCard,
-  Text,
-} from '../../../../components';
+import {GridView, LoadingIndicator, PinCard, Text} from '@Components/index';
 
 import {
   Content,
@@ -20,8 +17,6 @@ import {
   Category,
   Highlight,
 } from './styles';
-import {Pin} from '../../../../../domain/entities/pin';
-import {routes} from '../../../../../shared/config/routes';
 
 function Discover() {
   const navigation = useNavigation();
