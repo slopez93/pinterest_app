@@ -25,6 +25,8 @@
 - Implementing react-native-config for manage environments and flavors
   
 - Pending styling details like a dot carrousel... because its delay long time in all details
+  
+- Pending config prettier, eslint in detail
 
 
   *For an average project I understand that it is not necessary to assemble a type of complex architecture simply by structuring the components, application state and others, it could well simplify creating services for side effects and it would look simpler*
