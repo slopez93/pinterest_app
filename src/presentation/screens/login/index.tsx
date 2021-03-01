@@ -12,6 +12,7 @@ function LoginScreen() {
   const [password, setPassword] = useState('');
 
   const isFormValid = useMemo<boolean>(() => {
+    // TODO: Do a email validation regex
     return email.length > 5 && password.length > 0;
   }, [email, password]);
 
