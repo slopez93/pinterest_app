@@ -1,24 +1,23 @@
-import React, {useState, useEffect} from 'react';
-import {GetPinDetailUseCase} from '@Application/usecases/GetPinDetailUseCase';
-import {PinDetailModel} from '@Infrastructure/models/pinDetail';
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import {ICamera} from '@Infrastructure/services/camera';
+import {clearPinDetail, fetchPinDetail} from '@Store/pins/actions';
+import {pinDetailSelector} from '@Store/pins/selectors';
 import {serviceLocator} from '@Shared/config/di';
 
 import View from './view';
 
 function PinDetail({route}) {
-  const [pinDetail, setPinDetail] = useState<PinDetailModel>();
+  const dispatch = useDispatch();
+  const pinDetail = useSelector(pinDetailSelector);
 
   useEffect(() => {
-    // TODO: Moving this in a VM using MVVM patter
-    async function fetch() {
-      const useCase = serviceLocator.get<GetPinDetailUseCase>(
-        'GetPinDetailUseCase',
-      );
-      const response = await useCase.execute(route.params?.id);
-      setPinDetail(response);
-    }
-    fetch();
+    const id = route.params?.id;
+    dispatch(fetchPinDetail(id));
+
+    return () => {
+      dispatch(clearPinDetail());
+    };
   }, []);
 
   const handleCamera = (): void => {

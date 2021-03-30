@@ -10,10 +10,20 @@ const reducer = (
   const {type, payload} = action;
 
   switch (type) {
-    case types.SET_DISCOVER:
+    case types.SET_PINS:
       return {
         ...state,
-        discover: payload.data,
+        pins: payload.data,
+      };
+    case types.SET_PIN_DETAIL:
+      return {
+        ...state,
+        pinDetail: payload.data,
+      };
+    case types.CLEAR_PIN_DETAIL:
+      return {
+        ...state,
+        pinDetail: null,
       };
     default:
       return state;

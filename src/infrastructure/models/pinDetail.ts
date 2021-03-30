@@ -2,6 +2,8 @@ export class PinDetailModel {
   public id: number;
   public name: string;
   public category: string;
+  public color: string;
+  public thumbnail: string;
   public images: Array<string>;
   public size: string;
   public sizes: Array<string>;
@@ -10,6 +12,8 @@ export class PinDetailModel {
     id: number,
     name: string,
     category: string,
+    color: string,
+    thumbnail: string,
     images: Array<string>,
     size: string,
     sizes: Array<string>,
@@ -17,6 +21,8 @@ export class PinDetailModel {
     this.id = id;
     this.name = name;
     this.category = category;
+    this.color = color;
+    this.thumbnail = thumbnail;
     this.images = images;
     this.size = size;
     this.sizes = sizes;
@@ -27,6 +33,8 @@ export class PinDetailModel {
       data.id,
       data.name,
       data.category,
+      data.color,
+      data.thumbnail,
       data.images,
       data.size,
       data.sizes,
@@ -38,6 +46,8 @@ export class PinDetailModel {
       id: this.id,
       name: this.name,
       category: this.category,
+      color: this.color,
+      thumbnail: this.thumbnail,
       images: this.images,
       size: this.size,
       sizes: this.sizes,

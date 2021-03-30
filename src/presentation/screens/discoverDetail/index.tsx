@@ -9,7 +9,7 @@ function DiscoverDetail({route}) {
   const [discoverDetail, setDiscoverDetail] = useState<DiscoverDetailModel>();
 
   useEffect(() => {
-    // TODO: Moving this in a VM using MVVM patter
+    // TODO: Example call use case directly in view
     async function fetch() {
       const useCase = serviceLocator.get<GetDiscoverDetailUseCase>(
         'GetDiscoverDetailUseCase',

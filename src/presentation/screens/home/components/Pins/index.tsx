@@ -3,8 +3,8 @@ import {useNavigation} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
 import {Pin} from '@Domain/entities/pin';
 import {isLoadingSelector} from '@Store/app/selectors';
-import {fetchPins} from '@Store/user/actions';
-import {pinsSelector} from '@Store/user/selectors';
+import {fetchPins} from '@Store/pins/actions';
+import {pinsSelector} from '@Store/pins/selectors';
 import {routes} from '@Shared/config/routes';
 
 import {GridView, LoadingIndicator} from '@Components/index';

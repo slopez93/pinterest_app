@@ -1,5 +1,6 @@
 import {IState} from '../types';
 
 export const INITIAL_STATE: IState = {
-  discover: null,
+  pins: null,
+  pinDetail: null,
 };

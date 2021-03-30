@@ -1,4 +1,4 @@
-export type Pin = {
+type Pin = {
   id: string;
   thumbnail: string;
   name: string;

@@ -8,6 +8,7 @@ import {LOGOUT} from './auth/types';
 import app from './app/reducer';
 import auth from './auth/reducer';
 import user from './user/reducer';
+import pins from './pins/reducer';
 
 import {intitSagas} from './sagas/initSagas';
 
@@ -15,6 +16,7 @@ const reducers = combineReducers({
   app,
   auth,
   user,
+  pins,
 });
 
 const rootReducer = (state: any, action: any) => {

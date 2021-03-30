@@ -1,5 +1,5 @@
 import {inject, injectable} from 'inversify';
-import {UserRemoteDataSource} from '@Infrastructure/datasources/user/userRemoteDataSource';
+import {UserRemoteDataSource} from '@Infrastructure/datasources/userRemoteDataSource';
 import {DiscoverDetailModel} from '@Infrastructure/models/discoverDetail';
 
 @injectable()
