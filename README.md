@@ -1,4 +1,4 @@
-# Lookiero app
+# Pinteest app
 
 ***TODO:***
 
