@@ -24,7 +24,7 @@ describe('Test login screen', () => {
   const mockStore = {
     app: {},
     auth: {user: {name: 'Marta'}},
-    user: {pins: mockPins},
+    pins: {pins: mockPins},
   };
   const store = configureStore()(mockStore);
 
@@ -38,7 +38,7 @@ describe('Test login screen', () => {
 
   test('should success and dispatch fetch pins actions', () => {
     store.dispatch = jest.fn();
-    const expectedAction = {payload: {}, type: 'user/FETCH_PINS'};
+    const expectedAction = {payload: {}, type: 'pins/FETCH_PINS'};
 
     const WrapperComponent = ({children}) => (
       <Provider store={store}>{children}</Provider>

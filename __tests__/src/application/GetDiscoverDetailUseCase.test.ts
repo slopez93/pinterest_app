@@ -2,7 +2,7 @@ import 'reflect-metadata';
 
 import {mock, verify, when, reset, instance} from 'ts-mockito';
 import {GetDiscoverDetailUseCase} from '~/application/usecases/GetDiscoverDetailUseCase';
-import {UserRemoteDataSource} from '~/infrastructure/datasources/user/userRemoteDataSource';
+import {UserRemoteDataSource} from '~/infrastructure/datasources/userRemoteDataSource';
 import {DiscoverDetailModel} from '~/infrastructure/models/discoverDetail';
 
 describe('Test GetDiscoverDetailUseCase', () => {
