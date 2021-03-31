@@ -1,5 +1,5 @@
 import React from 'react';
-import {PinDetailModel} from '../../../infrastructure/models/pinDetail';
+import {PinDetailModel} from '@Infrastructure/models/pinDetail';
 import {
   LoadingIndicator,
   Button,
@@ -11,7 +11,7 @@ import {
   PinSizes,
   PinDescription,
   View as ViewComponent,
-} from '../../components';
+} from '@Components/index';
 
 type Props = {
   pinDetail: PinDetailModel | undefined;

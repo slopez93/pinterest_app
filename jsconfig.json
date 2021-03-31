@@ -10,12 +10,14 @@
       "@Application/*": ["src/application/*"],
       "@Domain/*": ["src/domain/*"],
       "@Infrastructure/*": ["src/infrastructure/*"],
+      "@Presentation/*": ["src/presentation/*"],
       "@Shared/*": ["src/shared/*"],
       "@Navigation/*": ["src/presentation/navigation/*"],
       "@Screens/*": ["src/presentation/screens/*"],
       "@Components/*": ["src/presentation/components/*"],
       "@Assets/*": ["src/presentation/assets/*"],
-      "@Store/*": ["src/presentation/store/*"]
+      "@Store/*": ["src/presentation/store/*"],
+      "@Hooks/*": ["src/presentation/hooks/*"]
     }
   },
   "exclude": ["coverage", "dist", "node_modules"]

@@ -2,11 +2,10 @@ import React, {useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
 import {Pin} from '@Domain/entities/pin';
-import {isLoadingSelector} from '@Store/app/selectors';
 import {fetchDiscover} from '@Store/user/actions';
 import {discoverSelector} from '@Store/user/selectors';
+import {useIsLoading} from '@Hooks/index';
 import {routes} from '@Shared/config/routes';
-
 import {GridView, LoadingIndicator, PinCard, Text} from '@Components/index';
 
 import {
@@ -21,7 +20,7 @@ import {
 function Discover() {
   const navigation = useNavigation();
   const dispatch = useDispatch();
-  const isLoading = useSelector(isLoadingSelector);
+  const [isLoading] = useIsLoading();
   const discover = useSelector(discoverSelector);
 
   useEffect(() => {
