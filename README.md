@@ -1,4 +1,4 @@
-# Pinteest app
+# Pinterest app
 
 ***TODO:***
 
